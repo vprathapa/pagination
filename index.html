@@ -21,8 +21,34 @@
                 paging: true, 
                 info: false,
                 pageLength: 8
-            });
-            
+            }).column(3);
+
+            // function myFunction(x) {
+            //     if (x.matches) { // If media query matches
+            //         $('.abc input[type="search"]').attr('placeholder', 'Search').css(
+            //             {'margin-left':'-185%', 'width': '100%', 'padding-left': '100%'}
+            //         );
+            //         $('.abc #text').css(
+            //             {'visibility': 'hidden'}
+            //         );
+            //         $('.abc #example1_length').css(
+            //             {'display': 'none'}
+            //         );
+            //         $('.abc #example1_paginate').css(
+            //             {'margin-left':'-213%'}
+            //         );
+            //     } else {
+            //         $('.abc input[type="search"]').attr('placeholder', 'Search').css(
+            //             {'margin-left':'-28%', 'width': '100%'}
+            //         );
+            //         $('.abc #example1_length').css(
+            //             {'display': 'none'}
+            //         );
+            //         $('.abc #example1_paginate').css(
+            //             {'margin-left':'-15%', 'padding-left': '30px'}
+            //         );
+            //     }
+            // }
             function myFunction(x) {
                 if (x.matches) { // If media query matches
                     $('.abc input[type="search"]').attr('placeholder', 'Search').css(
@@ -54,21 +80,16 @@
                 }
             }
 
-            
-//             $('.container input[type="search"]').attr('placeholder', 'Search').css(
-//                 {'margin-left':'-205%'}
-//             );
-//             $('.container #example1_paginate').css(
-//                 {'margin-left':'-113%'}
-//             );
-            
+                var x = window.matchMedia("(min-width: 768px)")
+                myFunction(x) // Call listener function at run time
+                x.addListener(myFunction) // Attach listener function on state changes
         });
     </script>
 </head>
 <body>
     <br>
-    <div class="container">
-        <div style="width: 180px">
+    <div class="abc">
+        <div style="width: 200px">
             <table class="table table-striped table-bordered" id="example1">
                 <thead>
                     <tr>
@@ -78,47 +99,47 @@
                 <tbody>
                     <tr>
                         <td>
-                            <a href="#">link1</a>
+                            <a href="#">link01</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">link2</a>
+                            <a href="#">link02</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">link3</a>
+                            <a href="#">link03</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">link4</a>
+                            <a href="#">link04</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">link5</a>
+                            <a href="#">link05</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">link6</a>
+                            <a href="#">link06</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">link7</a>
+                            <a href="#">link07</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">link8</a>
+                            <a href="#">link08</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">link9</a>
+                            <a href="#">link09</a>
                         </td>
                     </tr>
                     <tr>
