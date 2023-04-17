@@ -22,14 +22,46 @@
                 info: false,
                 pageLength: 8
             }).column(3);
+            
+            function myFunction(x) {
+                if (x.matches) { // If media query matches
+                    $('.abc input[type="search"]').attr('placeholder', 'Search').css(
+                        {'margin-left':'-210%', 'width': '250%', 'padding-left': '100%'}
+                    );
+                    $('.abc #text').css(
+                        {'visibility': 'hidden'}
+                    );
+                    $('.abc #example1_length').css(
+                        {'display': 'none'}
+                    );
+                    $('.abc #example1_paginate').css(
+                        {'margin-left':'-213%'}
+                    );
+                } else {
+                    $('.abc input[type="search"]').attr('placeholder', 'Search').css(
+                        {'margin-left':'-27%', 'width': '100%'}
+                    );
+                    
+                    $('.abc #text').css(
+                        {'visibility': 'hidden'}
+                    );
+                    $('.abc #example1_length').css(
+                        {'display': 'none'}
+                    );
+                    $('.abc #example1_paginate').css(
+                        {'margin-left':'-30%', 'padding-left': '30px'}
+                    );
+                }
+            }
 
             
-            $('.container input[type="search"]').attr('placeholder', 'Search').css(
-                {'margin-left':'-205%'}
-            );
-            $('.container #example1_paginate').css(
-                {'margin-left':'-113%'}
-            );
+//             $('.container input[type="search"]').attr('placeholder', 'Search').css(
+//                 {'margin-left':'-205%'}
+//             );
+//             $('.container #example1_paginate').css(
+//                 {'margin-left':'-113%'}
+//             );
+            
         });
     </script>
 </head>
